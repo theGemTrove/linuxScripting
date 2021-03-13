@@ -17,9 +17,6 @@ read -p 'Enter the username to create: ' USER_NAME
 # Get Name (contents for the description field).
 read -p 'Enter the name of the person or application that will be using this account: ' COMMENT
 
-# Get the password.
-read -p 'Enter the password to use for the account: ' PASSWORD
-
 # Create Account
 useradd -c "${COMMENT}" -m ${USER_NAME}
 echo
@@ -31,7 +28,9 @@ then
 fi
 
 # Set the password
-echo ${PASSWORD} | passwd --stdin ${USER_NAME}
+echo ${USER_NAME} | passwd --stdin ${USER_NAME}
+echo "The password has been set to the username of the account"
+echo
 
 # Set Password - Command Succeeded?
 if [[ "${?}" -ne 0 ]]
