@@ -21,6 +21,13 @@ then
   exit 1
 fi
 
+# Extract USER_NAME from command
+USER_NAME="${1}"
+
+# Bundle other parameters into a comment
+shift
+COMMENT="${@}"
+
 # Create the Account or Log Error
 useradd -c "${COMMENT}" -m ${USERN_NAME}
 if [[ "${?}" -ne 0 ]]
