@@ -33,7 +33,7 @@ COMMENT="${@}"
 useradd -c "${COMMENT}" -m ${USER_NAME} &> /dev/null
 if [[ "${?}" -ne 0 ]]
 then
-  echo "Unable to create the user account." >&2
+  echo 'Unable to create the user account.' >&2
   echo 'Manually create the user account, or, submit a ticket to the Sys-Admin Team' >&2
   echo 'If you submit a ticket to the Sys-Admin Team, please allow 48 hours for ticket resolution.' >&2
   echo 'If the Sys-Admin Team cannot meet the 48 hour deadline, you will receive a notification with a set deadline' >&2
