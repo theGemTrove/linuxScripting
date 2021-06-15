@@ -1,4 +1,5 @@
 # BASH Scripting
+> A project based approach to Bash Scripting in order to prep for the RHCSA/RHCE 8 Exams
 
 ## System & Tools
 -  RHEL-8
